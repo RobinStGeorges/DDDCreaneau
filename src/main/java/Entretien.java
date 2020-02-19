@@ -2,11 +2,22 @@ import java.time.LocalDateTime;
 
 public class Entretien {
     Creneau creneau;
-    int salle;
+    int salle = -1;
 
     public Entretien(Creneau creneau, int salle) {
         this.creneau = creneau;
         this.salle = salle;
+    }
+
+    public boolean isValid(){
+        if(salle == -1){
+            return false;
+        }
+        if(!creneau.isValid){
+            System.out.println(creneau.isValid);
+            return false;
+        }
+        return true;
     }
 
     public Creneau getCreneau() {
