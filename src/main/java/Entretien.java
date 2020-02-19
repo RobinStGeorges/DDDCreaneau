@@ -2,19 +2,25 @@ import java.time.LocalDateTime;
 
 public class Entretien {
     Creneau creneau;
-    int salle = -1;
+    Salle salle;
+    int id;
+    String statut;
 
-    public Entretien(Creneau creneau, int salle) {
+    public Entretien(Creneau creneau, Salle salle, int id, String statut) {
         this.creneau = creneau;
         this.salle = salle;
+        this.id = id;
+        this.statut = statut;
     }
 
     public boolean isValid(){
-        if(salle == -1){
+        if(salle.numDeSalle <0){
+            return false;
+        }
+        if(salle.numEtage<0){
             return false;
         }
         if(!creneau.isValid){
-            System.out.println(creneau.isValid);
             return false;
         }
         return true;
@@ -28,11 +34,27 @@ public class Entretien {
         this.creneau = new Creneau(date, heureDebut, heureFin);
     }
 
-    public int getSalle() {
+    public Salle getSalle() {
         return salle;
     }
 
-    public void setSalle(int salle) {
+    public void setSalle(Salle salle) {
         this.salle = salle;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getStatut() {
+        return statut;
+    }
+
+    public void setStatut(String statut) {
+        this.statut = statut;
     }
 }

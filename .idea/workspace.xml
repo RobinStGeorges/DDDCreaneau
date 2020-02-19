@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a5d89da-090b-48f3-9f73-9cd78744197e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Salle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Entretien.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entretien.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/EntretienTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/EntretienTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,10 +114,14 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="93" y="93" width="1095" height="495" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1280.680@0.0.1280.680" timestamp="1582108089565" />
-    <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser" timestamp="1582106913166">
+    <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser" timestamp="1582110316314">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1582106913166" />
+    <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1582110316314" />
+    <state x="438" y="201" width="404" height="287" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1582110242204">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="438" y="201" width="404" height="287" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1280.680@0.0.1280.680" timestamp="1582110242204" />
     <state width="1237" height="174" key="GridCell.Tab.0.bottom" timestamp="1582108108388">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
