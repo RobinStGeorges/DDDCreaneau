@@ -1,5 +1,8 @@
 
 import org.junit.jupiter.api.Test;
+import org.junit.runner.RunWith;
+import org.mockito.Mock;
+import org.mockito.runners.MockitoJUnitRunner;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -7,12 +10,27 @@ import java.time.Month;
 import java.util.Date;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
 public class EntretienTest {
     @Test
     public void isValidShouldReturnTrue(){
         Creneau creneau = new Creneau(LocalDateTime.of(2020, Month.FEBRUARY, 3,0,0), 13,14);
-        Entretien entretien = new Entretien(creneau, 12);
+        Salle salle = new Salle(2,1);
+        Entretien entretien = new Entretien(creneau, salle, "created", new Recruteur("Tom"), new Candidat("Jerry"));
         assertEquals(entretien.isValid(), true);
+    }
+
+    @Mock
+    Entretien entretien;
+
+    @Test
+    public void twoDifferentEntretienShouldReturnTrue(){
+        Creneau creneau = new Creneau(LocalDateTime.of(2020, Month.FEBRUARY, 3,0,0), 13,14);
+        Salle salle = new Salle(2,1); // il faudrait que 2 entretien ai pas lieu meme salle
+        Entretien entretien1 = new Entretien(creneau, salle, "created", new Recruteur("Tom"), new Candidat("Jerry"));
+        Entretien entretien2 = new Entretien(creneau, salle, "created", new Recruteur("Tom"), new Candidat("Jerry"));
+        assertNotEquals(entretien1.getId(), entretien2.getId());
     }
 
 }

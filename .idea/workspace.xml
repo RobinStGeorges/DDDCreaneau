@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a5d89da-090b-48f3-9f73-9cd78744197e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Salle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Candidat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Recruteur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Entretien.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entretien.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/EntretienTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/EntretienTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Entretien.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Entretien.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/EntretienTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/EntretienTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +26,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="1Y1K8i5XrlwwPRA4aYF63pIqN7c" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -33,7 +46,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
   </component>
-  <component name="RunManager" selected="JUnit.EntretienTest.isValidShouldReturnTrue">
+  <component name="RunManager" selected="JUnit.EntretienTest.twoDifferentEntretienShouldReturnTrue">
     <configuration name="CreneauTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ProjetDDD" />
       <option name="PACKAGE_NAME" value="" />
@@ -43,32 +56,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CreneauTest.dateDébutIsBeforeDateFinSHouldReturnFalse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EntretienTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ProjetDDD" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CreneauTest" />
-      <option name="METHOD_NAME" value="dateDébutIsBeforeDateFinSHouldReturnFalse" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CreneauTest.dateDébutIsBeforeDateFinSHouldReturnTrue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ProjetDDD" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CreneauTest" />
-      <option name="METHOD_NAME" value="dateDébutIsBeforeDateFinSHouldReturnTrue" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CreneauTest.dateIsOnWeekendShouldReturnfalse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ProjetDDD" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CreneauTest" />
-      <option name="METHOD_NAME" value="dateIsOnWeekendShouldReturnfalse" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="EntretienTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -83,13 +75,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="EntretienTest.tWoDifferentEntretienShouldReturnTrue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ProjetDDD" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="EntretienTest" />
+      <option name="METHOD_NAME" value="tWoDifferentEntretienShouldReturnTrue" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EntretienTest.twoDifferentEntretienShouldReturnTrue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ProjetDDD" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="EntretienTest" />
+      <option name="METHOD_NAME" value="twoDifferentEntretienShouldReturnTrue" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.EntretienTest.twoDifferentEntretienShouldReturnTrue" />
+        <item itemvalue="JUnit.EntretienTest.tWoDifferentEntretienShouldReturnTrue" />
+        <item itemvalue="JUnit.EntretienTest" />
         <item itemvalue="JUnit.EntretienTest.isValidShouldReturnTrue" />
         <item itemvalue="JUnit.CreneauTest" />
-        <item itemvalue="JUnit.CreneauTest.dateIsOnWeekendShouldReturnfalse" />
-        <item itemvalue="JUnit.CreneauTest.dateDébutIsBeforeDateFinSHouldReturnFalse" />
-        <item itemvalue="JUnit.CreneauTest.dateDébutIsBeforeDateFinSHouldReturnTrue" />
       </list>
     </recent_temporary>
   </component>
@@ -114,30 +126,34 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="93" y="93" width="1095" height="495" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1280.680@0.0.1280.680" timestamp="1582108089565" />
-    <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser" timestamp="1582110316314">
+    <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser" timestamp="1582110684409">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1582110316314" />
+    <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1582110684409" />
     <state x="438" y="201" width="404" height="287" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1582110242204">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="438" y="201" width="404" height="287" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1280.680@0.0.1280.680" timestamp="1582110242204" />
-    <state width="1237" height="174" key="GridCell.Tab.0.bottom" timestamp="1582108108388">
+    <state width="1237" height="174" key="GridCell.Tab.0.bottom" timestamp="1582112079748">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="174" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1582108108388" />
-    <state width="1237" height="174" key="GridCell.Tab.0.center" timestamp="1582108108388">
+    <state width="1237" height="174" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1582112079748" />
+    <state width="1237" height="174" key="GridCell.Tab.0.center" timestamp="1582112079748">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="174" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1582108108388" />
-    <state width="1237" height="174" key="GridCell.Tab.0.left" timestamp="1582108108373">
+    <state width="1237" height="174" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1582112079748" />
+    <state width="1237" height="174" key="GridCell.Tab.0.left" timestamp="1582112079748">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="174" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1582108108373" />
-    <state width="1237" height="174" key="GridCell.Tab.0.right" timestamp="1582108108388">
+    <state width="1237" height="174" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1582112079748" />
+    <state width="1237" height="174" key="GridCell.Tab.0.right" timestamp="1582112079748">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="174" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1582108108388" />
+    <state width="1237" height="174" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1582112079748" />
+    <state x="171" y="0" key="Maven.ArtifactSearchDialog" timestamp="1582111297315">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="171" y="0" key="Maven.ArtifactSearchDialog/0.0.1280.680@0.0.1280.680" timestamp="1582111297315" />
     <state x="341" y="166" key="com.intellij.ide.util.TipDialog" timestamp="1582104522563">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

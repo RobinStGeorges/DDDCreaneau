@@ -1,16 +1,22 @@
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 public class Entretien {
     Creneau creneau;
     Salle salle;
-    int id;
+    String id;
     String statut;
+    Recruteur recruteur ;
+    Candidat candidat;
+    String canceledReason;
 
-    public Entretien(Creneau creneau, Salle salle, int id, String statut) {
+    public Entretien(Creneau creneau, Salle salle,  String statut, Recruteur recruteur, Candidat candidat) {
         this.creneau = creneau;
         this.salle = salle;
-        this.id = id;
+        this.id = UUID.randomUUID().toString();
         this.statut = statut;
+        this.candidat = candidat;
+        this.recruteur = recruteur;
     }
 
     public boolean isValid(){
@@ -42,13 +48,10 @@ public class Entretien {
         this.salle = salle;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getStatut() {
         return statut;
@@ -56,5 +59,14 @@ public class Entretien {
 
     public void setStatut(String statut) {
         this.statut = statut;
+    }
+
+    public void confirm(){
+        statut="comfirmed";
+    }
+
+    public void cancel(String reason){
+        statut="canceled";
+        canceledReason = reason;
     }
 }
