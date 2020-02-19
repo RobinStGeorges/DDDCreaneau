@@ -1,7 +1,8 @@
+package entretien;
 
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
-import recrutement.*;
+import entretien.*;
 
 import java.time.LocalDateTime;
 import java.time.Month;
@@ -11,18 +12,22 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 public class EntretienTest {
     @Test
-    public void isValidShouldReturnTrue(){
-        Creneau creneau = new Creneau(LocalDateTime.of(2020, Month.FEBRUARY, 3,0,0), 13,14);
-        Salle salle = new Salle(2,1);
-        Entretien entretien = new Entretien(creneau, salle, "created", new Recruteur("Tom"), new Candidat("Jerry"));
-        assertEquals(entretien.isValid(), true);
-    }
+    public void isValidShouldReturnTrue() throws Exception {
+        try{
+            Creneau creneau = new Creneau(LocalDateTime.of(2020, Month.FEBRUARY, 3,0,0), 13,14);
+            Salle salle = new Salle(2,1);
+            Entretien entretien = new Entretien(creneau, salle, "created", new Recruteur("Tom"), new Candidat("Jerry"));
+        }
+        catch (Exception e){
+            System.out.println(e);
+        }
+  }
 
     @Mock
     Entretien entretien;
 
     @Test
-    public void twoDifferentEntretienShouldReturnTrue(){
+    public void twoDifferentEntretienShouldReturnTrue() throws Exception {
         Creneau creneau = new Creneau(LocalDateTime.of(2020, Month.FEBRUARY, 3,0,0), 13,14);
         Salle salle = new Salle(2,1); // il faudrait que 2 entretien ai pas lieu meme salle
         Entretien entretien1 = new Entretien(creneau, salle, "created", new Recruteur("Tom"), new Candidat("Jerry"));
@@ -31,7 +36,7 @@ public class EntretienTest {
     }
 
     @Test
-    public void tryToConfirmCanceledEntretienShouldReturnFalse(){
+    public void tryToConfirmCanceledEntretienShouldReturnFalse() throws Exception {
         Creneau creneau = new Creneau(LocalDateTime.of(2020, Month.FEBRUARY, 3,0,0), 13,14);
         Salle salle = new Salle(2,1); // il faudrait que 2 entretien ai pas lieu meme salle
         Entretien entretien = new Entretien(creneau, salle, "created", new Recruteur("Tom"), new Candidat("Jerry"));
@@ -40,7 +45,7 @@ public class EntretienTest {
     }
 
     @Test
-    public void tryToConfirmComfirmedEntretienShouldReturnFalse(){
+    public void tryToConfirmComfirmedEntretienShouldReturnFalse() throws Exception {
         Creneau creneau = new Creneau(LocalDateTime.of(2020, Month.FEBRUARY, 3,0,0), 13,14);
         Salle salle = new Salle(2,1); // il faudrait que 2 entretien ai pas lieu meme salle
         Entretien entretien = new Entretien(creneau, salle, "created", new Recruteur("Tom"), new Candidat("Jerry"));

@@ -1,7 +1,4 @@
-package recrutement;
-
-import recrutement.Candidat;
-import recrutement.Recruteur;
+package entretien;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
@@ -24,24 +21,12 @@ public class Entretien {
         this.recruteur = recruteur;
     }
 
-    public boolean isValid(){
-        if(salle.numDeSalle <0){
-            return false;
-        }
-        if(salle.numEtage<0){
-            return false;
-        }
-        if(!creneau.isValid){
-            return false;
-        }
-        return true;
-    }
 
     public Creneau getCreneau() {
         return creneau;
     }
 
-    public void setCreneau(LocalDateTime date, int heureDebut, int heureFin) {
+    public void setCreneau(LocalDateTime date, int heureDebut, int heureFin) throws Exception {
         this.creneau = new Creneau(date, heureDebut, heureFin);
     }
 

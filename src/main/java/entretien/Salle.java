@@ -1,4 +1,4 @@
-package recrutement;
+package entretien;
 
 public class Salle {
     int numDeSalle;
