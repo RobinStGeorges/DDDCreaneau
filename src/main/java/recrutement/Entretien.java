@@ -1,3 +1,8 @@
+package recrutement;
+
+import recrutement.Candidat;
+import recrutement.Recruteur;
+
 import java.time.LocalDateTime;
 import java.util.UUID;
 
@@ -10,7 +15,7 @@ public class Entretien {
     Candidat candidat;
     String canceledReason;
 
-    public Entretien(Creneau creneau, Salle salle,  String statut, Recruteur recruteur, Candidat candidat) {
+    public Entretien(Creneau creneau, Salle salle, String statut, Recruteur recruteur, Candidat candidat) {
         this.creneau = creneau;
         this.salle = salle;
         this.id = UUID.randomUUID().toString();
@@ -61,8 +66,15 @@ public class Entretien {
         this.statut = statut;
     }
 
-    public void confirm(){
+    public boolean confirm(){
+        if(statut.equals("comfirmed")){
+            return false;
+        }
+        if(statut.equals("canceled")){
+            return false;
+        }
         statut="comfirmed";
+        return true;
     }
 
     public void cancel(String reason){

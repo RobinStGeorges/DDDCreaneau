@@ -1,3 +1,5 @@
+package recrutement;
+
 public class Salle {
     int numDeSalle;
     int numEtage;

@@ -1,7 +1,9 @@
-public class Recruteur {
+package recrutement;
+
+class Candidat {
     String name;
 
-    public Recruteur(String name) {
+    public Candidat(String name) {
         this.name = name;
     }
 

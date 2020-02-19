@@ -1,13 +1,10 @@
 
 import org.junit.jupiter.api.Test;
-import org.junit.runner.RunWith;
 import org.mockito.Mock;
-import org.mockito.runners.MockitoJUnitRunner;
+import recrutement.*;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.Month;
-import java.util.Date;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
@@ -31,6 +28,24 @@ public class EntretienTest {
         Entretien entretien1 = new Entretien(creneau, salle, "created", new Recruteur("Tom"), new Candidat("Jerry"));
         Entretien entretien2 = new Entretien(creneau, salle, "created", new Recruteur("Tom"), new Candidat("Jerry"));
         assertNotEquals(entretien1.getId(), entretien2.getId());
+    }
+
+    @Test
+    public void tryToConfirmCanceledEntretienShouldReturnFalse(){
+        Creneau creneau = new Creneau(LocalDateTime.of(2020, Month.FEBRUARY, 3,0,0), 13,14);
+        Salle salle = new Salle(2,1); // il faudrait que 2 entretien ai pas lieu meme salle
+        Entretien entretien = new Entretien(creneau, salle, "created", new Recruteur("Tom"), new Candidat("Jerry"));
+        entretien.cancel("testing");
+        assertEquals(entretien.confirm(), false);
+    }
+
+    @Test
+    public void tryToConfirmComfirmedEntretienShouldReturnFalse(){
+        Creneau creneau = new Creneau(LocalDateTime.of(2020, Month.FEBRUARY, 3,0,0), 13,14);
+        Salle salle = new Salle(2,1); // il faudrait que 2 entretien ai pas lieu meme salle
+        Entretien entretien = new Entretien(creneau, salle, "created", new Recruteur("Tom"), new Candidat("Jerry"));
+        entretien.confirm();
+        assertEquals(entretien.confirm(), false);
     }
 
 }
