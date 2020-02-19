@@ -9,15 +9,23 @@ public class Creneau {
 
     Creneau(LocalDateTime date, int heureDebut, int heureFin){
         String dayOfWeek = date.getDayOfWeek().name();
-        if(heureDebut<heureFin && !dayOfWeek.equals("SUNDAY") && !dayOfWeek.equals("SATURDAY")){
+
+        if (heureDebut>=heureFin){
+            isValid = false;
+        }
+        else if(dayOfWeek.equals("SUNDAY") || dayOfWeek.equals("SATURDAY")){
+            isValid = false;
+        }
+        else if(heureDebut>22 || heureDebut < 6){
+            isValid = false;
+        }
+        else{
             this.date = date;
             this.heureDebut = heureDebut;
             this.heureFin = heureFin;
             isValid = true;
         }
-        else{
-            isValid = false;
-        }
+
     }
 
     public Boolean getValid() {

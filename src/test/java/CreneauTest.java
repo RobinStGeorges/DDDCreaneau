@@ -42,4 +42,11 @@ public class CreneauTest{
         assertEquals(creneau.getValid(), false);
     }
 
+    @Test
+    public void hourIsTooLateSHouldReturnFalse(){
+        LocalDateTime date = LocalDateTime.of( 2020, Month.FEBRUARY, 22,0,0);
+        Creneau creneau = new Creneau(date, 23, 24);
+        assertEquals(creneau.getValid(), false);
+    }
+
 }
