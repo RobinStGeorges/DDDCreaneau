@@ -13,6 +13,7 @@ public class Candidat implements Personnes {
     public Candidat(DtoCandidat dtoCandidat) {
         this.name = dtoCandidat.name;
         this.id = UUID.randomUUID().toString();
+        this.specialite = dtoCandidat.specialite;
     }
 
     public String getName() {
@@ -29,5 +30,13 @@ public class Candidat implements Personnes {
 
     public void setStatutRecrutement(String statutRecrutement) {
         this.statutRecrutement = statutRecrutement;
+    }
+
+    public String getSpecialite() {
+        return specialite;
+    }
+
+    public void setSpecialite(String specialite) {
+        this.specialite = specialite;
     }
 }

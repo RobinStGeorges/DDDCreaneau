@@ -2,14 +2,13 @@ package model.entretien;
 
 import commun.DtoCandidat;
 import commun.DtoCreneau;
-import commun.DtoRecruteur;
 import commun.DtoSalle;
 import model.personne.Candidat;
 import model.personne.Recruteur;
 import model.personne.Personnes;
 import model.salle.Salle;
 
-import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.UUID;
 
 public class Entretien {
@@ -21,22 +20,34 @@ public class Entretien {
     Personnes candidat;
     String canceledReason;
 
-    public Entretien(DtoCreneau dtoCreneau, DtoSalle dtoSalle, DtoRecruteur dtoRecruteur, DtoCandidat dtoCandidat) throws Exception {
-        this.creneau = new Creneau(dtoCreneau.date, dtoCreneau.heureDebut, dtoCreneau.heureFin);
+    public Entretien(DtoCreneau dtoCreneau, DtoSalle dtoSalle, ArrayList<Recruteur> recruteurs, DtoCandidat dtoCandidat) throws Exception {
+        this.creneau = new Creneau(dtoCreneau);
         this.salle = new Salle(dtoSalle.numSalle, dtoSalle.etage);
         this.id = UUID.randomUUID().toString();
         this.statut = "created";
         this.candidat = new Candidat(dtoCandidat);
-        this.recruteur = new Recruteur(dtoRecruteur);
+        if(this.candidat.getSpecialite() == null){
+            this.recruteur = recruteurs.get(0);
+        }
+        else{
+            for(Recruteur unRecruteur : recruteurs){
+                if(unRecruteur.getSpecialite().equals(this.candidat.getSpecialite())){
+                    this.recruteur = unRecruteur;
+                }
+            }
+        }
+        if(this.recruteur == null){
+            throw new Exception("Il n'y a pas de recruteur disponible");
+        }
     }
 
-
+/*Setters / getters */
     public Creneau getCreneau() {
         return creneau;
     }
 
-    public void setCreneau(LocalDateTime date, int heureDebut, int heureFin) throws Exception {
-        this.creneau = new Creneau(date, heureDebut, heureFin);
+    public void setCreneau(DtoCreneau creneau) throws Exception {
+        this.creneau = new Creneau(creneau);
     }
 
     public Salle getSalle() {
@@ -51,7 +62,6 @@ public class Entretien {
         return id;
     }
 
-
     public String getStatut() {
         return statut;
     }
@@ -60,12 +70,6 @@ public class Entretien {
         this.statut = statut;
     }
 
-
-
-    public void cancel(String reason){
-        statut="canceled";
-        canceledReason = reason;
-    }
 
     public Personnes getRecruteur() {
         return recruteur;
