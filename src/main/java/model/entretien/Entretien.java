@@ -1,5 +1,12 @@
 package model.entretien;
 
+import commun.DtoCandidat;
+import commun.DtoCreneau;
+import commun.DtoRecruteur;
+import commun.DtoSalle;
+import model.personne.Candidat;
+import model.personne.Recruteur;
+import model.personne.Personnes;
 import model.salle.Salle;
 
 import java.time.LocalDateTime;
@@ -10,17 +17,17 @@ public class Entretien {
     Salle salle;
     String id;
     String statut;
-    Recruteur recruteur ;
-    Candidat candidat;
+    Personnes recruteur ;
+    Personnes candidat;
     String canceledReason;
 
-    public Entretien(LocalDateTime date, int heureDebut, int heureFin, int salle, int etage, String statut, String recruteur, String candidat) throws Exception {
-        this.creneau = new Creneau(date, heureDebut, heureFin);
-        this.salle = new Salle(salle, etage);
+    public Entretien(DtoCreneau dtoCreneau, DtoSalle dtoSalle, DtoRecruteur dtoRecruteur, DtoCandidat dtoCandidat) throws Exception {
+        this.creneau = new Creneau(dtoCreneau.date, dtoCreneau.heureDebut, dtoCreneau.heureFin);
+        this.salle = new Salle(dtoSalle.numSalle, dtoSalle.etage);
         this.id = UUID.randomUUID().toString();
-        this.statut = statut;
-        this.candidat = new Candidat(candidat);
-        this.recruteur = new Recruteur(recruteur);
+        this.statut = "created";
+        this.candidat = new Candidat(dtoCandidat);
+        this.recruteur = new Recruteur(dtoRecruteur);
     }
 
 
@@ -53,19 +60,26 @@ public class Entretien {
         this.statut = statut;
     }
 
-    public boolean confirm(){
-        if(statut.equals("comfirmed")){
-            return false;
-        }
-        if(statut.equals("canceled")){
-            return false;
-        }
-        statut="comfirmed";
-        return true;
-    }
+
 
     public void cancel(String reason){
         statut="canceled";
         canceledReason = reason;
+    }
+
+    public Personnes getRecruteur() {
+        return recruteur;
+    }
+
+    public void setRecruteur(Personnes recruteur) {
+        this.recruteur = recruteur;
+    }
+
+    public Personnes getCandidat() {
+        return candidat;
+    }
+
+    public void setCandidat(Personnes candidat) {
+        this.candidat = candidat;
     }
 }

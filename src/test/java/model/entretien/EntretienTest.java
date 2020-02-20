@@ -3,6 +3,7 @@ package model.entretien;
 import model.salle.Salle;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
+import use_case.entretien.ComfirmerEntretien;
 
 import java.time.LocalDateTime;
 import java.time.Month;
@@ -23,9 +24,6 @@ public class EntretienTest {
         }
   }
 
-    @Mock
-    Entretien entretien;
-
     @Test
     public void twoDifferentEntretienShouldReturnTrue() throws Exception {
         Creneau creneau = new Creneau(LocalDateTime.of(2020, Month.FEBRUARY, 3,0,0), 13,14);
@@ -43,7 +41,8 @@ public class EntretienTest {
         Entretien entretien = new Entretien(LocalDateTime.of(2020, Month.FEBRUARY, 3,0,0), 13,14, 2,1, "created", "Tom", "Jerry");
 
         entretien.cancel("testing");
-        assertEquals(entretien.confirm(), false);
+        ComfirmerEntretien comfirmerEntretien = new ComfirmerEntretien();
+        assertEquals(comfirmerEntretien.comfirmerEntretien(entretien), false);
     }
 
     @Test
@@ -51,8 +50,9 @@ public class EntretienTest {
         Creneau creneau = new Creneau(LocalDateTime.of(2020, Month.FEBRUARY, 3,0,0), 13,14);
         Salle salle = new Salle(2,1); // il faudrait que 2 model.entretien ai pas lieu meme salle
         Entretien entretien = new Entretien(LocalDateTime.of(2020, Month.FEBRUARY, 3,0,0), 13,14, 2,1, "created", "Tom", "Jerry");
-        entretien.confirm();
-        assertEquals(entretien.confirm(), false);
+        ComfirmerEntretien comfirmerEntretien = new ComfirmerEntretien();
+        comfirmerEntretien.comfirmerEntretien(entretien);
+        assertEquals(false, comfirmerEntretien.comfirmerEntretien(entretien));
     }
 
 }
