@@ -16,7 +16,7 @@ public class EntretienTest {
         try{
             Creneau creneau = new Creneau(LocalDateTime.of(2020, Month.FEBRUARY, 3,0,0), 13,14);
             Salle salle = new Salle(2,1);
-            Entretien entretien = new Entretien(creneau, salle, "created", new Recruteur("Tom"), new Candidat("Jerry"));
+            Entretien entretien = new Entretien(LocalDateTime.of(2020, Month.FEBRUARY, 3,0,0), 13,14, 2,1, "created", "Tom", "Jerry");
         }
         catch (Exception e){
             System.out.println(e);
@@ -30,8 +30,9 @@ public class EntretienTest {
     public void twoDifferentEntretienShouldReturnTrue() throws Exception {
         Creneau creneau = new Creneau(LocalDateTime.of(2020, Month.FEBRUARY, 3,0,0), 13,14);
         Salle salle = new Salle(2,1); // il faudrait que 2 model.entretien ai pas lieu meme salle
-        Entretien entretien1 = new Entretien(creneau, salle, "created", new Recruteur("Tom"), new Candidat("Jerry"));
-        Entretien entretien2 = new Entretien(creneau, salle, "created", new Recruteur("Tom"), new Candidat("Jerry"));
+        Entretien entretien1 = new Entretien(LocalDateTime.of(2020, Month.FEBRUARY, 3,0,0), 13,14, 2,1, "created", "Tom", "Jerry");
+        Entretien entretien2 = new Entretien(LocalDateTime.of(2020, Month.FEBRUARY, 3,0,0), 13,14, 2,1, "created", "Tom", "Jerry");
+
         assertNotEquals(entretien1.getId(), entretien2.getId());
     }
 
@@ -39,7 +40,8 @@ public class EntretienTest {
     public void tryToConfirmCanceledEntretienShouldReturnFalse() throws Exception {
         Creneau creneau = new Creneau(LocalDateTime.of(2020, Month.FEBRUARY, 3,0,0), 13,14);
         Salle salle = new Salle(2,1); // il faudrait que 2 model.entretien ai pas lieu meme salle
-        Entretien entretien = new Entretien(creneau, salle, "created", new Recruteur("Tom"), new Candidat("Jerry"));
+        Entretien entretien = new Entretien(LocalDateTime.of(2020, Month.FEBRUARY, 3,0,0), 13,14, 2,1, "created", "Tom", "Jerry");
+
         entretien.cancel("testing");
         assertEquals(entretien.confirm(), false);
     }
@@ -48,7 +50,7 @@ public class EntretienTest {
     public void tryToConfirmComfirmedEntretienShouldReturnFalse() throws Exception {
         Creneau creneau = new Creneau(LocalDateTime.of(2020, Month.FEBRUARY, 3,0,0), 13,14);
         Salle salle = new Salle(2,1); // il faudrait que 2 model.entretien ai pas lieu meme salle
-        Entretien entretien = new Entretien(creneau, salle, "created", new Recruteur("Tom"), new Candidat("Jerry"));
+        Entretien entretien = new Entretien(LocalDateTime.of(2020, Month.FEBRUARY, 3,0,0), 13,14, 2,1, "created", "Tom", "Jerry");
         entretien.confirm();
         assertEquals(entretien.confirm(), false);
     }

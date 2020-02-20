@@ -4,5 +4,7 @@ import java.util.ArrayList;
 
 public interface Entretiens {
 
-    ArrayList entretien = new ArrayList();
+    ArrayList<Entretien> entretiens = new ArrayList<Entretien>();
+
+
 }

@@ -2,21 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a5d89da-090b-48f3-9f73-9cd78744197e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/Kireta.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/entretien/Candidats.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/entretien/Creneaux.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/entretien/Entretiens.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/entretien/Recruteurs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/salle/Salles.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/use_case/entretien/CreerEntretien.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entretien/Candidat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/entretien/Candidat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entretien/Creneau.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/entretien/Creneau.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entretien/Entretien.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/entretien/Entretien.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entretien/Recruteur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/entretien/Recruteur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entretien/Salle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/salle/Salle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/entretien/CreneauTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/model/entretien/CreneauTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/entretien/EntretienTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/model/entretien/EntretienTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/entretien/Entretiens.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/entretien/Entretiens.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/use_case/entretien/CreerEntretien.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/use_case/entretien/CreerEntretien.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/model/entretien/EntretienTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/model/entretien/EntretienTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
