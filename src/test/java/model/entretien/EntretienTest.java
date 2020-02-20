@@ -1,8 +1,8 @@
-package entretien;
+package model.entretien;
 
+import model.salle.Salle;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
-import entretien.*;
 
 import java.time.LocalDateTime;
 import java.time.Month;
@@ -29,7 +29,7 @@ public class EntretienTest {
     @Test
     public void twoDifferentEntretienShouldReturnTrue() throws Exception {
         Creneau creneau = new Creneau(LocalDateTime.of(2020, Month.FEBRUARY, 3,0,0), 13,14);
-        Salle salle = new Salle(2,1); // il faudrait que 2 entretien ai pas lieu meme salle
+        Salle salle = new Salle(2,1); // il faudrait que 2 model.entretien ai pas lieu meme salle
         Entretien entretien1 = new Entretien(creneau, salle, "created", new Recruteur("Tom"), new Candidat("Jerry"));
         Entretien entretien2 = new Entretien(creneau, salle, "created", new Recruteur("Tom"), new Candidat("Jerry"));
         assertNotEquals(entretien1.getId(), entretien2.getId());
@@ -38,7 +38,7 @@ public class EntretienTest {
     @Test
     public void tryToConfirmCanceledEntretienShouldReturnFalse() throws Exception {
         Creneau creneau = new Creneau(LocalDateTime.of(2020, Month.FEBRUARY, 3,0,0), 13,14);
-        Salle salle = new Salle(2,1); // il faudrait que 2 entretien ai pas lieu meme salle
+        Salle salle = new Salle(2,1); // il faudrait que 2 model.entretien ai pas lieu meme salle
         Entretien entretien = new Entretien(creneau, salle, "created", new Recruteur("Tom"), new Candidat("Jerry"));
         entretien.cancel("testing");
         assertEquals(entretien.confirm(), false);
@@ -47,7 +47,7 @@ public class EntretienTest {
     @Test
     public void tryToConfirmComfirmedEntretienShouldReturnFalse() throws Exception {
         Creneau creneau = new Creneau(LocalDateTime.of(2020, Month.FEBRUARY, 3,0,0), 13,14);
-        Salle salle = new Salle(2,1); // il faudrait que 2 entretien ai pas lieu meme salle
+        Salle salle = new Salle(2,1); // il faudrait que 2 model.entretien ai pas lieu meme salle
         Entretien entretien = new Entretien(creneau, salle, "created", new Recruteur("Tom"), new Candidat("Jerry"));
         entretien.confirm();
         assertEquals(entretien.confirm(), false);

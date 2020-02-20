@@ -1,5 +1,6 @@
-package entretien;
+package model.entretien;
 
+import model.Creneau;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import java.time.LocalDateTime;

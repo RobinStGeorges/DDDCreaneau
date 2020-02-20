@@ -1,4 +1,6 @@
-package entretien;
+package model.entretien;
+
+import model.salle.Salle;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
@@ -12,13 +14,13 @@ public class Entretien {
     Candidat candidat;
     String canceledReason;
 
-    public Entretien(Creneau creneau, Salle salle, String statut, Recruteur recruteur, Candidat candidat) {
-        this.creneau = creneau;
-        this.salle = salle;
+    public Entretien(LocalDateTime date, int heureDebut, int heureFin, int salle, int etage, String statut, String recruteur, String candidat) throws Exception {
+        this.creneau = new Creneau(date, heureDebut, heureFin);
+        this.salle = new Salle(salle, etage);
         this.id = UUID.randomUUID().toString();
         this.statut = statut;
-        this.candidat = candidat;
-        this.recruteur = recruteur;
+        this.candidat = new Candidat(candidat);
+        this.recruteur = new Recruteur(recruteur);
     }
 
 

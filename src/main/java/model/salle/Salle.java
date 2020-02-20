@@ -1,4 +1,4 @@
-package entretien;
+package model.salle;
 
 public class Salle {
     int numDeSalle;
