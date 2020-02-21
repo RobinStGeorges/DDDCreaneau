@@ -3,11 +3,16 @@ package infrastructure;
 import model.entretien.Entretien;
 import model.personne.Candidat;
 import model.personne.Recruteur;
+import model.salle.Reservation;
 import model.salle.Salle;
+import model.salle.Salles;
 
 import java.util.ArrayList;
 
-public class Recrutement {
+public class Recrutement implements Salles {
+
+    int RecrutementID;
+
     ArrayList<Entretien> entretiens = new ArrayList<Entretien>();
 
     ArrayList<Candidat> candidats = new ArrayList<Candidat>();
@@ -16,49 +21,20 @@ public class Recrutement {
 
     ArrayList<Salle> salles = new ArrayList<Salle>();
 
-    private static Recrutement instance = null;
+    ArrayList<Reservation> reservations = new ArrayList<Reservation>();
 
-    private Recrutement() {
+
+    public Recrutement() {
     }
 
-    public static final Recrutement getInstance() {
-        if (instance == null) {
-            instance = new Recrutement();
-            return instance;
-        } else {
-            return instance;
-        }
+
+    @Override
+    public ArrayList<Salle> getAllSalles() {
+        return null;
     }
 
-    public ArrayList<Entretien> getEntretiens() {
-        return entretiens;
-    }
-
-    public void setEntretiens(ArrayList<Entretien> entretiens) {
-        this.entretiens = entretiens;
-    }
-
-    public ArrayList<Candidat> getCandidats() {
-        return candidats;
-    }
-
-    public void setCandidats(ArrayList<Candidat> candidats) {
-        this.candidats = candidats;
-    }
-
-    public ArrayList<Recruteur> getRecruteurs() {
-        return recruteurs;
-    }
-
-    public void setRecruteurs(ArrayList<Recruteur> recruteurs) {
-        this.recruteurs = recruteurs;
-    }
-
-    public ArrayList<Salle> getSalles() {
-        return salles;
-    }
-
-    public void setSalles(ArrayList<Salle> salles) {
-        this.salles = salles;
+    @Override
+    public Salle getSalleByID(int id) {
+        return null;
     }
 }

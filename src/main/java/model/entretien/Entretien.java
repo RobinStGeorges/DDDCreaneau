@@ -3,9 +3,11 @@ package model.entretien;
 import commun.DtoCandidat;
 import commun.DtoCreneau;
 import commun.DtoSalle;
+import infrastructure.Recrutement;
 import model.personne.Candidat;
 import model.personne.Recruteur;
 import model.personne.Personnes;
+import model.salle.Reservation;
 import model.salle.Salle;
 
 import java.util.ArrayList;
@@ -13,16 +15,17 @@ import java.util.UUID;
 
 public class Entretien {
     Creneau creneau;
-    Salle salle;
     String id;
     String statut;
     Personnes recruteur ;
     Personnes candidat;
     String canceledReason;
+    //SalleID
+    int salleId;
+    int recrutementID;
 
     public Entretien(DtoCreneau dtoCreneau, DtoSalle dtoSalle, ArrayList<Recruteur> recruteurs, DtoCandidat dtoCandidat) throws Exception {
         this.creneau = new Creneau(dtoCreneau);
-        this.salle = new Salle(dtoSalle.numSalle, dtoSalle.etage);
         this.id = UUID.randomUUID().toString();
         this.statut = "created";
         this.candidat = new Candidat(dtoCandidat);
@@ -39,6 +42,7 @@ public class Entretien {
         if(this.recruteur == null){
             throw new Exception("Il n'y a pas de recruteur disponible");
         }
+
     }
 
 /*Setters / getters */
@@ -48,14 +52,6 @@ public class Entretien {
 
     public void setCreneau(DtoCreneau creneau) throws Exception {
         this.creneau = new Creneau(creneau);
-    }
-
-    public Salle getSalle() {
-        return salle;
-    }
-
-    public void setSalle(Salle salle) {
-        this.salle = salle;
     }
 
     public String getId() {

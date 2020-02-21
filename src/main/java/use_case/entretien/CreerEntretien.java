@@ -12,6 +12,7 @@ public class CreerEntretien {
 
     public void creerEntretien(DtoCreneau dtoCreneau, DtoSalle dtoSalle, DtoCandidat dtoCandidat, Recrutement recrutement) throws Exception {
         Entretien entretien = new Entretien( dtoCreneau,  dtoSalle,  recrutement.getRecruteurs(),  dtoCandidat);
+        // Salle
         Recrutement.getInstance().getEntretiens().add(entretien);
     }
 }

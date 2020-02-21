@@ -1,27 +1,47 @@
 package model.salle;
 
 public class Salle {
-    int numDeSalle;
-    int numEtage;
+    public int numSalle;
+    public int etage;
+    public int capaciteMax;
+    public boolean hasProjecteur;
 
-    public Salle(int numDeSalle, int numEtage) {
-        this.numDeSalle = numDeSalle;
-        this.numEtage = numEtage;
+    public Salle(int numSalle, int etage, int capaciteMax, boolean hasProjecteur) {
+        this.numSalle = numSalle;
+        this.etage = etage;
+        this.capaciteMax = capaciteMax;
+        this.hasProjecteur = hasProjecteur;
     }
 
-    public int getNumDeSalle() {
-        return numDeSalle;
+    public int getNumSalle() {
+        return numSalle;
     }
 
-    public void setNumDeSalle(int numDeSalle) {
-        this.numDeSalle = numDeSalle;
+    public void setNumSalle(int numSalle) {
+        this.numSalle = numSalle;
     }
 
-    public int getNumEtage() {
-        return numEtage;
+    public int getEtage() {
+        return etage;
     }
 
-    public void setNumEtage(int numEtage) {
-        this.numEtage = numEtage;
+    public void setEtage(int etage) {
+        this.etage = etage;
+    }
+
+    public int getCapaciteMax() {
+        return capaciteMax;
+    }
+
+    public void setCapaciteMax(int capaciteMax) {
+        this.capaciteMax = capaciteMax;
+    }
+
+    public boolean isHasProjecteur() {
+        return hasProjecteur;
+    }
+
+    public void setHasProjecteur(boolean hasProjecteur) {
+        this.hasProjecteur = hasProjecteur;
     }
 }
