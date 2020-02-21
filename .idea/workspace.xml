@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2a5d89da-090b-48f3-9f73-9cd78744197e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/model/entretien/EntretienTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/model/entretien/EntretienTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/entretien/Creneau.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/entretien/Creneau.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/model/entretien/CreneauTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/model/entretien/CreneauTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +50,54 @@
       <recent name="entretien" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.EntretienTest">
+  <component name="RunManager" selected="JUnit.CreneauTest">
+    <configuration name="CreneauTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ProjetDDD" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="model.entretien.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="model.entretien" />
+      <option name="MAIN_CLASS_NAME" value="model.entretien.CreneauTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CreneauTest.dateDébutIsBeforeDateFinSHouldReturnException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ProjetDDD" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="model.entretien.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="model.entretien" />
+      <option name="MAIN_CLASS_NAME" value="model.entretien.CreneauTest" />
+      <option name="METHOD_NAME" value="dateDébutIsBeforeDateFinSHouldReturnException" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CreneauTest.dateDébutIsBeforeDateFinSHouldReturnTrue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ProjetDDD" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="model.entretien.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="model.entretien" />
+      <option name="MAIN_CLASS_NAME" value="model.entretien.CreneauTest" />
+      <option name="METHOD_NAME" value="dateDébutIsBeforeDateFinSHouldReturnTrue" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="EntretienTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ProjetDDD" />
       <extension name="coverage">
@@ -61,38 +109,6 @@
       <option name="PACKAGE_NAME" value="model.entretien" />
       <option name="MAIN_CLASS_NAME" value="model.entretien.EntretienTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="EntretienTest.tryToConfirmCanceledEntretienShouldReturnExeption" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ProjetDDD" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="model.entretien.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="model.entretien" />
-      <option name="MAIN_CLASS_NAME" value="model.entretien.EntretienTest" />
-      <option name="METHOD_NAME" value="tryToConfirmCanceledEntretienShouldReturnExeption" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="EntretienTest.tryToConfirmCanceledEntretienShouldReturnFalse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ProjetDDD" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="model.entretien.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="model.entretien" />
-      <option name="MAIN_CLASS_NAME" value="model.entretien.EntretienTest" />
-      <option name="METHOD_NAME" value="tryToConfirmCanceledEntretienShouldReturnFalse" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -113,29 +129,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EntretienTest.twoDifferentEntretienShouldReturnTrue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ProjetDDD" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="model.entretien.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="model.entretien" />
-      <option name="MAIN_CLASS_NAME" value="model.entretien.EntretienTest" />
-      <option name="METHOD_NAME" value="twoDifferentEntretienShouldReturnTrue" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CreneauTest" />
+        <item itemvalue="JUnit.CreneauTest.dateDébutIsBeforeDateFinSHouldReturnException" />
+        <item itemvalue="JUnit.CreneauTest.dateDébutIsBeforeDateFinSHouldReturnTrue" />
         <item itemvalue="JUnit.EntretienTest" />
         <item itemvalue="JUnit.EntretienTest.tryToConfirmComfirmedEntretienShouldReturnException" />
-        <item itemvalue="JUnit.EntretienTest.tryToConfirmCanceledEntretienShouldReturnExeption" />
-        <item itemvalue="JUnit.EntretienTest.tryToConfirmCanceledEntretienShouldReturnFalse" />
-        <item itemvalue="JUnit.EntretienTest.twoDifferentEntretienShouldReturnTrue" />
       </list>
     </recent_temporary>
   </component>
@@ -176,22 +176,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="371" y="89" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1582213647477" />
-    <state width="1237" height="164" key="GridCell.Tab.0.bottom" timestamp="1582300881013">
+    <state width="1237" height="164" key="GridCell.Tab.0.bottom" timestamp="1582301137152">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="164" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1582300881013" />
-    <state width="1237" height="164" key="GridCell.Tab.0.center" timestamp="1582300881013">
+    <state width="1237" height="164" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1582301137152" />
+    <state width="1237" height="164" key="GridCell.Tab.0.center" timestamp="1582301137152">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="164" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1582300881013" />
-    <state width="1237" height="164" key="GridCell.Tab.0.left" timestamp="1582300881013">
+    <state width="1237" height="164" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1582301137152" />
+    <state width="1237" height="164" key="GridCell.Tab.0.left" timestamp="1582301137152">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="164" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1582300881013" />
-    <state width="1237" height="164" key="GridCell.Tab.0.right" timestamp="1582300881013">
+    <state width="1237" height="164" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1582301137152" />
+    <state width="1237" height="164" key="GridCell.Tab.0.right" timestamp="1582301137152">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="164" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1582300881013" />
+    <state width="1237" height="164" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1582301137152" />
     <state x="171" y="0" key="Maven.ArtifactSearchDialog" timestamp="1582111297315">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

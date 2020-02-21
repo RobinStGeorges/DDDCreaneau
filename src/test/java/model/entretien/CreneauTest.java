@@ -6,7 +6,7 @@ import java.time.LocalDateTime;
 import java.time.Month;
 
 public class CreneauTest{
-/*
+
     @Test
     public void dateDébutIsBeforeDateFinSHouldReturnTrue() throws Exception {
         try{
@@ -55,5 +55,5 @@ public class CreneauTest{
                     Creneau creneau = new Creneau(date, 23, 24);
                 });
     }
-*/
+
 }
