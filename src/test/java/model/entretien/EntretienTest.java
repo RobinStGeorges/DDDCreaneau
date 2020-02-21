@@ -67,15 +67,22 @@ public class EntretienTest {
                 });
 
     }
-/*
+
     @Test
-    public void tryToConfirmComfirmedEntretienShouldReturnFalse() throws Exception {
-        Creneau creneau = new Creneau(LocalDateTime.of(2020, Month.FEBRUARY, 3,0,0), 13,14);
-        Salle salle = new Salle(2,1); // il faudrait que 2 model.entretien ai pas lieu meme salle
-        Entretien entretien = new Entretien(LocalDateTime.of(2020, Month.FEBRUARY, 3,0,0), 13,14, 2,1, "created", "Tom", "Jerry");
+    public void tryToConfirmComfirmedEntretienShouldReturnException() throws Exception {
+        DtoCreneau creneau = new DtoCreneau(LocalDateTime.of(2020, Month.FEBRUARY, 3, 0, 0), 13, 14);
+        CreerEntretien creerEntretien = new CreerEntretien();
+        Recrutement recrutement = new Recrutement();
+        DtoCandidat dtoCandidat = new DtoCandidat("John", "Java");
+        recrutement.recruteurs.add(new Recruteur(new DtoRecruteur("Jerry", "Java")));
+        String entretienID = creerEntretien.creerEntretien(creneau, dtoCandidat, recrutement);
+        Entretien entretien = recrutement.ChercherEntretienParID(entretienID);
+        AnnulerEntretien annulerEntretien = new AnnulerEntretien();
         ComfirmerEntretien comfirmerEntretien = new ComfirmerEntretien();
         comfirmerEntretien.comfirmerEntretien(entretien);
-        assertEquals(false, comfirmerEntretien.comfirmerEntretien(entretien));
+        assertThrows(Exception.class,
+                () -> {
+                    comfirmerEntretien.comfirmerEntretien(entretien);
+                });
     }
-*/
 }
