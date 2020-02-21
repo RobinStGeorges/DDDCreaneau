@@ -11,7 +11,8 @@ import model.entretien.Entretien;
 public class CreerEntretien {
 
     public void creerEntretien(DtoCreneau dtoCreneau, DtoCandidat dtoCandidat, Recrutement recrutement) throws Exception {
-        Entretien entretien = new Entretien( dtoCreneau, dtoCandidat);
+
+        Entretien entretien = new Entretien( dtoCreneau, dtoCandidat, recrutement);
         // Salle
         recrutement.entretiens.add(entretien);
     }

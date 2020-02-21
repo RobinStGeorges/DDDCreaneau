@@ -24,13 +24,11 @@ public class Entretien {
     int salleId;
     int recrutementID;
 
-    public Entretien(DtoCreneau dtoCreneau, DtoCandidat dtoCandidat) throws Exception {
+    public Entretien(DtoCreneau dtoCreneau, DtoCandidat dtoCandidat, Recrutement recrutement) throws Exception {
         this.creneau = new Creneau(dtoCreneau);
         this.id = UUID.randomUUID().toString();
         this.statut = "created";
         this.candidat = new Candidat(dtoCandidat);
-        Recrutement recrutement = new Recrutement();
-        System.out.println(recrutement.recruteurs);
         if(this.candidat.getSpecialite() == null){
             this.recruteur = recrutement.recruteurs.get(0);
         }
