@@ -5,9 +5,9 @@ import commun.DtoCreneau;
 import java.time.LocalDateTime;
 
 class Creneau {
-    LocalDateTime date;
-    int heureDebut;
-    int heureFin;
+    public LocalDateTime date;
+    public int heureDebut;
+    public int heureFin;
 
     Creneau(DtoCreneau dtoCreneau) throws Exception {
         String dayOfWeek = dtoCreneau.date.getDayOfWeek().name();
@@ -41,4 +41,5 @@ class Creneau {
     public int getHeureFin() {
         return heureFin;
     }
+
 }

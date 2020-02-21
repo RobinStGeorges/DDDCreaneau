@@ -1,21 +1,31 @@
 package commun;
 
+import model.entretien.Entretien;
 import model.personne.Personnes;
 import model.salle.Salle;
 
 public class DtoEntretien {
 
     DtoCreneau creneau;
-    Salle salle;
+    int salleID;
     String id;
     String statut;
     Personnes recruteur ;
     Personnes candidat;
     String canceledReason;
 
+    public DtoEntretien(Entretien entretien){
+
+        this.creneau = new DtoCreneau(entretien.retournerDateDuCreaneau(entretien.getCreneau()), entretien.retournerHeureDebutDuCreneau(entretien.getCreneau()), entretien.retournerHeureFinDuCreneau(entretien.getCreneau()));
+        this.salleID = entretien.getSalleId();
+        this.statut = entretien.getStatut();
+        this.recruteur = entretien.getRecruteur();
+        this.candidat = entretien.getCandidat();
+    }
+
     public DtoEntretien(DtoCreneau creneau, Salle salle, String id, String statut, Personnes recruteur, Personnes candidat, String canceledReason) {
         this.creneau = creneau;
-        this.salle = salle;
+        this.salleID = salle.getSalleID();
         this.id = id;
         this.statut = statut;
         this.recruteur = recruteur;
@@ -29,14 +39,6 @@ public class DtoEntretien {
 
     public void setCreneau(DtoCreneau creneau) {
         this.creneau = creneau;
-    }
-
-    public Salle getSalle() {
-        return salle;
-    }
-
-    public void setSalle(Salle salle) {
-        this.salle = salle;
     }
 
     public String getId() {

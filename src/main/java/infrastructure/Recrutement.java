@@ -70,4 +70,13 @@ public class Recrutement implements Salles, Reservations {
         }
         return reservationsDeLaSalle;
     }
+
+    public Entretien ChercherEntretienParID(String id) throws Exception {
+        for(Entretien entretien : entretiens){
+            if(entretien.getId() == id){
+                return entretien;
+            }
+        }
+        throw new Exception("Cet entretien n'existe pas");
+    }
 }

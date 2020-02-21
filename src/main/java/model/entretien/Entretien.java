@@ -10,11 +10,12 @@ import model.personne.Personnes;
 import model.salle.Reservation;
 import model.salle.Salle;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.UUID;
 
 public class Entretien {
-    Creneau creneau;
+    public Creneau creneau;
     String id;
     String statut;
     Personnes recruteur ;
@@ -50,6 +51,18 @@ public class Entretien {
         return creneau;
     }
 
+    public LocalDateTime retournerDateDuCreaneau(Creneau creneau){
+        return creneau.getDate();
+    }
+
+    public int retournerHeureDebutDuCreneau(Creneau creneau){
+        return creneau.heureDebut;
+    }
+
+    public int retournerHeureFinDuCreneau(Creneau creneau){
+        return creneau.heureFin;
+    }
+
     public void setCreneau(DtoCreneau creneau) throws Exception {
         this.creneau = new Creneau(creneau);
     }
@@ -82,4 +95,10 @@ public class Entretien {
     public void setCandidat(Personnes candidat) {
         this.candidat = candidat;
     }
+
+    public int getSalleId() {
+        return salleId;
+    }
+
+
 }
