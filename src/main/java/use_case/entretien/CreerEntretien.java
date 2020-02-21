@@ -10,9 +10,9 @@ import model.entretien.Entretien;
 
 public class CreerEntretien {
 
-    public void creerEntretien(DtoCreneau dtoCreneau, DtoSalle dtoSalle, DtoCandidat dtoCandidat, Recrutement recrutement) throws Exception {
-        Entretien entretien = new Entretien( dtoCreneau,  dtoSalle,  recrutement.getRecruteurs(),  dtoCandidat);
+    public void creerEntretien(DtoCreneau dtoCreneau, DtoCandidat dtoCandidat, Recrutement recrutement) throws Exception {
+        Entretien entretien = new Entretien( dtoCreneau, dtoCandidat);
         // Salle
-        Recrutement.getInstance().getEntretiens().add(entretien);
+        recrutement.entretiens.add(entretien);
     }
 }

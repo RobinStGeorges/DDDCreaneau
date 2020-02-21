@@ -1,6 +1,7 @@
 package model.salle;
 
 public class Salle {
+    int salleID;
     public int numSalle;
     public int etage;
     public int capaciteMax;
@@ -43,5 +44,13 @@ public class Salle {
 
     public void setHasProjecteur(boolean hasProjecteur) {
         this.hasProjecteur = hasProjecteur;
+    }
+
+    public int getSalleID() {
+        return salleID;
+    }
+
+    public void setSalleID(int salleID) {
+        this.salleID = salleID;
     }
 }

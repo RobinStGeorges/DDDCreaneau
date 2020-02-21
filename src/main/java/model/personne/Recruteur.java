@@ -15,6 +15,11 @@ public class Recruteur implements Personnes {
         return name;
     }
 
+    @Override
+    public String getSpecialite() {
+        return  specialite;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
